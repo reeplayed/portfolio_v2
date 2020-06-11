@@ -7,7 +7,6 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import GlobalStyle from "../styles/globalStyles"
 import { ThemeProvider } from "styled-components"
 import { theme } from "../styles/theme"
@@ -15,7 +14,7 @@ import Curtain from "../components/Curtain"
 import Header from "./Header"
 import Sidebar from "./Sidebar"
 
-import "../styles/layout.css"
+import "./layout.css"
 
 const Layout = ({ children }) => {
   return (
