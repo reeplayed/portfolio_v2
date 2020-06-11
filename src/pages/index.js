@@ -1,22 +1,23 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { useEffect } from "react"
+import Aos from "aos"
+import "aos/dist/aos.css"
+import Layout from "../components/Layout"
+import Home from "../sections/Home"
+import About from "../sections/About"
+import Projects from "../sections/Projects"
+import Contact from "../sections/Contact"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
-
+const IndexPage = () => {
+  useEffect(() => {
+    Aos.init({ duration: 700 })
+  }, [])
+  return (
+    <Layout>
+      <Home />
+      <About />
+      <Projects />
+      <Contact />
+    </Layout>
+  )
+}
 export default IndexPage

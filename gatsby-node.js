@@ -1,7 +1,30 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+// const { createRemoteFileNode } = require('gatsby-source-filesystem');
 
-// You can delete this file if you're not using it
+// exports.createResolvers = ({
+//   actions: { createNode },
+//   cache,
+//   createNodeId,
+//   createResolvers,
+//   store,
+//   reporter,
+// }) => {
+//   const resolvers = {
+//     Portfolio_Asset: {
+//       node: {
+//         type: `File`,
+//         resolve: ({ url }, args, context, info) => {
+//           return createRemoteFileNode({
+//             url,
+//             store,
+//             cache,
+//             createNode,
+//             createNodeId,
+//             reporter,
+//           });
+//         },
+//       },
+//     },
+//   };
+
+//   createResolvers(resolvers);
+// };
