@@ -26,23 +26,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Portfolio`,
+        short_name: `portfolio`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // {
-    //   resolve: "gatsby-source-graphql",
-    //       options: {
-    //       typeName: "Portfolio",
-    //       fieldName: "portfolio",
-    //       url: "https://api-eu-central-1.graphcms.com/v2/ckaczjwt60flw01xpgxt61x7s/master",
-    //   },
-    // },
     {
       resolve: `gatsby-source-datocms`,
       options: {
