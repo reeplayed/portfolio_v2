@@ -17,7 +17,7 @@ const Container = styled.div`
 
   ${({ theme }) => theme.mq.standard} {
     flex-direction: column;
-    margin-top: 80px;
+    margin-top: 120px;
   }
 `
 const ContentWrapper = styled.div`

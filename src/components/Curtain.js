@@ -39,7 +39,8 @@ const Curtain = () => {
 
     gsap.set(logo, { y: "-200" })
 
-    tl.to(logo, 0.9, { y: "0", autoAlpha:'1', delay: "0.2" }).to(curtain, 1.3, {
+    tl.to(logo, 0.9, { y: "0", autoAlpha:'1', delay: "0.2" })
+    .to(curtain, 1.3, {
       x: "100%",
       delay: "0.6",
       ease: "power3.inOut",
