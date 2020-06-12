@@ -18,6 +18,9 @@ const HeaderContainer = styled.header`
   align-items: center;
   justify-content: space-between;
   z-index: 998;
+  ${({ theme }) => theme.mq.standard} {
+    padding: 10px 30px;
+  }
 `
 const LogoWrapper = styled.div`
   padding: 0 10px;
