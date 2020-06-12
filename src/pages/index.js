@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import Aos from "aos"
 import "aos/dist/aos.css"
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 import Home from "../sections/Home"
 import About from "../sections/About"
 import Projects from "../sections/Projects"
