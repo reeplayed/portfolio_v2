@@ -8,6 +8,7 @@ export const theme = {
     black: "#0d0d0d",
     textField: "rgba(196, 196, 196, 0.6)",
     light: "#F9F9F9",
+    light200: "#e6e6e6",
   },
   shadows: {
     header: "0px 3px 10px rgba(0, 0, 0, 0.15)",

@@ -17,13 +17,17 @@ import Sidebar from "./Sidebar"
 import "../styles/layout.css"
 
 const Layout = ({ children }) => {
+
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
+
   return (
     <>
       <ThemeProvider theme={theme}>
         <Curtain />
         <GlobalStyle />
         <Sidebar />
-
         <Header />
         <main>{children}</main>
       </ThemeProvider>

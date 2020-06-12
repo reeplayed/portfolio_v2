@@ -3,7 +3,6 @@ import styled from "styled-components"
 import FbIcon from "../assets/fbIcon.svg"
 import GitHubIcon from "../assets/githubIcon.svg"
 import LinkedinIcon from "../assets/linkedinIcon.svg"
-import LineIcon from "../assets/sidebarLine.svg"
 import { useScrollPosition } from "../hooks/scrollHook"
 import gsap from "gsap"
 import {socialLinks} from '../helpers/SocialLinks';
@@ -21,7 +20,7 @@ const Container = styled.div`
     bottom: -30px;
   }
 `
-const StyledLine = styled(LineIcon)``
+
 const IconWrapper = styled.div`
   margin: 3px 0;
   cursor: pointer;
@@ -72,20 +71,71 @@ const SectionTitle = styled.span`
 `
 const IconsWrapper = styled.div``
 
+const TopLineWrapper = styled.div`
+    overflow-y: hidden;
+    padding: 0 2px;
+`;
+const TopLine = styled.span`
+    display: block;
+    
+    position: relative;
+    width: 1px;
+    background: ${({theme})=>theme.colors.light200};
+    height: 150px;
+border-radius: 50px;
+
+
+transition: all 1s;
+&:before{
+    content: '';
+    display: block;
+    width:100%;
+    height: 100%;
+    background: ${({theme})=>theme.colors.text};
+    transform: ${({ position }) => {
+      switch (position) {
+        case "home":
+          return "translateY(-75%)"
+        case "about":
+          return "translateY(-50%)"
+        case "projects":
+          return "translateY(-25%)"
+        case "contact":
+          return "translateY(0)"
+      }
+    }};
+    transition: transform 0.8s;
+    border-radius: 50px;
+}
+`;
+const BotLine = styled.span`
+display: block;
+  
+    position: relative;
+    width: 1px;
+    background: ${({theme})=>theme.colors.text};
+    height: 50px;
+border-radius: 50px;
+
+
+`;
+
 const Sidebar = () => {
   const scrollPosition = useScrollPosition()
+  const topLineRef = useRef(null)
   const lineRef = useRef(null)
   const iconsRef = useRef(null)
   const sectionRef = useRef(null)
 
   useEffect(() => {
     const line = lineRef.current
+    const topLine = topLineRef.current
     const icons = iconsRef.current
     const section = sectionRef.current
 
     const tl = gsap.timeline()
 
-    tl.set([line, ...icons.children], { autoAlpha: 0 })
+    tl.set([line, ...icons.children, topLine], { autoAlpha: 0 })
     tl.set(section, { x: "-=30", autoAlpha: 0 })
 
     tl.fromTo(
@@ -94,11 +144,14 @@ const Sidebar = () => {
       { y: "10", autoAlpha: 1, duration: 0.6, delay: "4" }
     )
       .to(section, 0.4, { x: "0", autoAlpha: 1 })
-      .staggerTo([...icons.children], 0.5, { autoAlpha: 1, duration: 1 }, 0.2)
+      .staggerTo([...icons.children, topLine], 1, { autoAlpha: 1 }, 0.2)
   }, [])
 
   return (
     <Container>
+      <TopLineWrapper ref={topLineRef}>
+            <TopLine position={scrollPosition}/>
+        </TopLineWrapper>
       <SectionDisplayContainer ref={sectionRef}>
         <SectionDisplayInner position={scrollPosition}>
           <ItemWrapper>
@@ -116,35 +169,34 @@ const Sidebar = () => {
         </SectionDisplayInner>
       </SectionDisplayContainer>
       <IconsWrapper ref={iconsRef}>
+        <IconWrapper>
           <a href={socialLinks.linkedin}
             target='_blank'
             >
-            <IconWrapper>
 
           <LinkedinIcon />
-        </IconWrapper>
           </a>
+        </IconWrapper>
+        <IconWrapper>
         <a href={socialLinks.github}
             target='_blank'
           >
 
-        <IconWrapper>
           <GitHubIcon />
-        </IconWrapper>
           </a>
+        </IconWrapper>
+        <IconWrapper>
         <a href={socialLinks.fb}
             target='_blank'
           >
 
-        <IconWrapper>
           <FbIcon />
-        </IconWrapper>
           </a>
+        </IconWrapper>
       </IconsWrapper>
 
-      <div ref={lineRef}>
-        <StyledLine />
-      </div>
+      <BotLine ref={lineRef}/>
+       
     </Container>
   )
 }
