@@ -51,7 +51,7 @@ const ProjectInfoComponent = ({date, advanced, technologies, link}) => {
 
       <ItemBox>
         <Title>Technologies</Title>
-  <Value>{technologies.join('. ')}</Value>
+  <Value>{technologies.join(', ')}</Value>
       </ItemBox>
       <ItemBox>
         <Title>Github</Title>
