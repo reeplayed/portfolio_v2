@@ -25,6 +25,7 @@ const StyledLogo = styled(Logo)`
 const LogoWrapper = styled.div`
   padding: 0 20px;
   owerflow: hidden;
+  visibility: hidden;
 `
 const Curtain = () => {
   const curtainRef = useRef(null)
@@ -36,7 +37,7 @@ const Curtain = () => {
 
     const tl = gsap.timeline()
 
-    gsap.set(logo, { y: "-200", autoAlpha:'0' })
+    gsap.set(logo, { y: "-200" })
 
     tl.to(logo, 0.9, { y: "0", autoAlpha:'1', delay: "0.2" }).to(curtain, 1.3, {
       x: "100%",
