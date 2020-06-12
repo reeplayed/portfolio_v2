@@ -9,7 +9,7 @@ const Container = styled.div`
   height: 100vh;
   top: 0;
   left: 0;
-  background: ${({ theme }) => theme.colors.light};
+  background: ${({ theme }) => theme.colors.light200};
   z-index: 999;
   display: flex;
   align-items: center;

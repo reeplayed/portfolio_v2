@@ -70,7 +70,7 @@ const MenuContainer = styled.div`
   height: 100vh;
   top: 0;
   left: 0;
-  background: ${({ theme }) => theme.colors.light};
+  background: ${({ theme }) => theme.colors.light200};
   transition: transform 0.8s cubic-bezier(0.24, 0, 0.08, 0.89);
   z-index: 0;
   display: flex;
