@@ -6,6 +6,7 @@ import LinkedinIcon from "../assets/linkedinIcon.svg"
 import LineIcon from "../assets/sidebarLine.svg"
 import { useScrollPosition } from "../hooks/scrollHook"
 import gsap from "gsap"
+import {socialLinks} from '../helpers/SocialLinks';
 
 const Container = styled.div`
   position: fixed;
@@ -23,6 +24,11 @@ const Container = styled.div`
 const StyledLine = styled(LineIcon)``
 const IconWrapper = styled.div`
   margin: 3px 0;
+  cursor: pointer;
+  transition: transform 0.1s;
+  &:hover{
+    transform: scale(1.2);
+  }
 `
 const SectionDisplayContainer = styled.div`
   width: 30px;
@@ -57,6 +63,7 @@ const ItemWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  
 `
 const SectionTitle = styled.span`
   color: ${({ theme }) => theme.colors.grey};
@@ -109,15 +116,30 @@ const Sidebar = () => {
         </SectionDisplayInner>
       </SectionDisplayContainer>
       <IconsWrapper ref={iconsRef}>
-        <IconWrapper>
+          <a href={socialLinks.linkedin}
+            target='_blank'
+            >
+            <IconWrapper>
+
           <LinkedinIcon />
         </IconWrapper>
+          </a>
+        <a href={socialLinks.github}
+            target='_blank'
+          >
+
         <IconWrapper>
           <GitHubIcon />
         </IconWrapper>
+          </a>
+        <a href={socialLinks.fb}
+            target='_blank'
+          >
+
         <IconWrapper>
           <FbIcon />
         </IconWrapper>
+          </a>
       </IconsWrapper>
 
       <div ref={lineRef}>

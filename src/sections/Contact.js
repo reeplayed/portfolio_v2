@@ -5,6 +5,7 @@ import Illustration from "../assets/illustrations/contactIllustration.svg"
 import Heading from "../helpers/Heading"
 import UnderlineText from "../helpers/UnderlineText"
 import { graphql, useStaticQuery } from "gatsby"
+import {socialLinks} from '../helpers/SocialLinks';
 
 const Container = styled.div`
   display: flex;
@@ -94,11 +95,21 @@ const Contact = () => {
             </ContactInfoItem>
             <ContactInfoItem>
               <Title>GITHUB</Title>
+              <a href={socialLinks.github}
+                target='_blank'
+              >
+
               <Value>reeplyed</Value>
+              </a>
             </ContactInfoItem>
             <ContactInfoItem>
               <Title>LINKEDIN</Title>
+              <a href={socialLinks.linkedin}
+                target='_blank'
+              >
+
               <Value>.borkowski</Value>
+              </a>
             </ContactInfoItem>
             <ContactInfoItem>
               <Title>PHONE</Title>
