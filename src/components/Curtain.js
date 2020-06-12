@@ -10,7 +10,6 @@ const Container = styled.div`
   top: 0;
   left: 0;
   background: ${({ theme }) => theme.colors.light};
-
   z-index: 999;
   display: flex;
   align-items: center;
@@ -39,7 +38,7 @@ const Curtain = () => {
 
     gsap.set(logo, { y: "-200", autoAlpha='0' })
 
-    tl.to(logo, 0.9, { y: "0", autoAlpha='0', delay: "0.2" }).to(curtain, 1.3, {
+    tl.to(logo, 0.9, { y: "0", autoAlpha='1', delay: "0.2" }).to(curtain, 1.3, {
       x: "100%",
       delay: "0.6",
       ease: "power3.inOut",

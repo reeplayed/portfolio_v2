@@ -14,7 +14,7 @@ import Curtain from "./Curtain"
 import Header from "./header"
 import Sidebar from "./Sidebar"
 
-import "./layout.css"
+import "../styles/layout.css"
 
 const Layout = ({ children }) => {
   return (
