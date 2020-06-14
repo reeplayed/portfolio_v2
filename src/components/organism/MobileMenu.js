@@ -94,7 +94,7 @@ const MenuItem = styled.li`
   color: ${({ theme }) => theme.colors.text};
   cursor: pointer;
   transition: letter-spacing 0.4s;
-  &:hover{
+  &:hover {
     letter-spacing: 4px;
   }
 `

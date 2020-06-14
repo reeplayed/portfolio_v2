@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import moment from 'moment';
+import moment from "moment"
 
 const Container = styled.div`
   display: flex;
@@ -37,12 +37,12 @@ const Value = styled.p`
     font-size: 10px;
   }
 `
-const ProjectInfoComponent = ({date, advanced, technologies, link}) => {
+const ProjectInfoComponent = ({ date, advanced, technologies, link }) => {
   return (
     <Container>
       <ItemBox>
         <Title>Date</Title>
-  <Value>{moment(date).format("MMMM YYYY")}</Value>
+        <Value>{moment(date).format("MMMM YYYY")}</Value>
       </ItemBox>
       <ItemBox>
         <Title>Advanced</Title>
@@ -51,12 +51,11 @@ const ProjectInfoComponent = ({date, advanced, technologies, link}) => {
 
       <ItemBox>
         <Title>Technologies</Title>
-  <Value>{technologies.join(', ')}</Value>
+        <Value>{technologies.join(", ")}</Value>
       </ItemBox>
       <ItemBox>
         <Title>Github</Title>
-        <a href={link}
-        target='_blank'>
+        <a href={link} target="_blank">
           <Value>Link</Value>
         </a>
       </ItemBox>

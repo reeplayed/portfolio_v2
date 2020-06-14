@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 import ProjectInfoComponent from "../molecules/ProjectInfoComponent"
 import ArrowButton from "../atoms/ArrowButton"
 import { useWindowSize } from "../../hooks/windowSizeHook"
-import UnderlineText from '../../helpers/UnderlineText';
+import UnderlineText from "../../helpers/UnderlineText"
 
 const Container = styled.div`
   display: flex;
@@ -16,7 +16,6 @@ const Container = styled.div`
 
   ${({ theme }) => theme.mq.standard} {
     flex-direction: column;
-   
   }
 `
 const ContentWrapper = styled.div`
@@ -96,7 +95,18 @@ const DemoWrapper = styled.div`
   }
 `
 
-const SliderContent = ({ setSlide, index, title, image, description ,demolink ,date ,githublink ,technologies,advanced}) => {
+const SliderContent = ({
+  setSlide,
+  index,
+  title,
+  image,
+  description,
+  demolink,
+  date,
+  githublink,
+  technologies,
+  advanced,
+}) => {
   const isMobile = useWindowSize()
 
   return (
@@ -110,13 +120,12 @@ const SliderContent = ({ setSlide, index, title, image, description ,demolink ,d
             <StyledImg fluid={image.fluid} />
           </ImageWrapper>
         )}
-        <ProjectInfoComponent 
+        <ProjectInfoComponent
           date={date}
           advanced={advanced}
           technologies={technologies}
           link={githublink}
-          
-          />
+        />
         <Description>{description}</Description>
         <Footer>
           <ArrowsWrapper>
@@ -124,15 +133,9 @@ const SliderContent = ({ setSlide, index, title, image, description ,demolink ,d
             <ArrowButton rotate onclick={setSlide.next} />
           </ArrowsWrapper>
           <DemoWrapper>
-          <a
-          href={demolink}
-          target='_blank'
-          >
-
-          <UnderlineText>
-            OPEN DEMO
-          </UnderlineText>
-          </a>
+            <a href={demolink} target="_blank">
+              <UnderlineText>OPEN DEMO</UnderlineText>
+            </a>
           </DemoWrapper>
         </Footer>
       </ContentWrapper>

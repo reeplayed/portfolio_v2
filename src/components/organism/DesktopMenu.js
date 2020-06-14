@@ -12,7 +12,7 @@ const MenuItem = styled.li`
   cursor: pointer;
   text-shadow: 1px 1px 8px #fff;
   transition: letter-spacing 0.4s;
-  &:hover{
+  &:hover {
     letter-spacing: 2px;
   }
 `

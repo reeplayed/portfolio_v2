@@ -5,8 +5,8 @@ import Illustration from "../assets/illustrations/contactIllustration.svg"
 import Heading from "../helpers/Heading"
 import UnderlineText from "../helpers/UnderlineText"
 import { graphql, useStaticQuery } from "gatsby"
-import {socialLinks} from '../utils/SocialLinks';
-import Footer from '../components/organism/Footer';
+import { socialLinks } from "../utils/SocialLinks"
+import Footer from "../components/organism/Footer"
 
 const Container = styled.div`
   display: flex;
@@ -71,15 +71,12 @@ const Value = styled.p`
   }
 `
 const Contact = () => {
-
   const data = useStaticQuery(graphql`
-  query MyQuery {
-    file(name: {eq: "CV_Borkowski"}) {
-      
-      publicURL
+    query MyQuery {
+      file(name: { eq: "CV_Borkowski" }) {
+        publicURL
+      }
     }
-  }
-  
   `)
   return (
     <Section id="contact-section">
@@ -96,20 +93,14 @@ const Contact = () => {
             </ContactInfoItem>
             <ContactInfoItem>
               <Title>GITHUB</Title>
-              <a href={socialLinks.github}
-                target='_blank'
-              >
-
-              <Value>reeplyed</Value>
+              <a href={socialLinks.github} target="_blank">
+                <Value>reeplyed</Value>
               </a>
             </ContactInfoItem>
             <ContactInfoItem>
               <Title>LINKEDIN</Title>
-              <a href={socialLinks.linkedin}
-                target='_blank'
-              >
-
-              <Value>.borkowski</Value>
+              <a href={socialLinks.linkedin} target="_blank">
+                <Value>.borkowski</Value>
               </a>
             </ContactInfoItem>
             <ContactInfoItem>
@@ -117,21 +108,14 @@ const Contact = () => {
               <Value>791160198</Value>
             </ContactInfoItem>
             <ContactInfoItem>
-              <a
-               href={data.file.publicURL}
-               
-               download={`Borkowski-CV`}
-              >
-
-
-              <UnderlineText>DOWNLOAD CV</UnderlineText>
+              <a href={data.file.publicURL} download={`Borkowski-CV`}>
+                <UnderlineText>DOWNLOAD CV</UnderlineText>
               </a>
             </ContactInfoItem>
           </Content>
         </ContactInfoWrapper>
       </Container>
-      <Footer/>
-
+      <Footer />
     </Section>
   )
 }

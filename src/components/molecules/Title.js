@@ -97,7 +97,13 @@ const TitleComponent = () => {
     })
     gsap.set([...lan.children], { autoAlpha: 0, x: "-20" })
 
-    tl.staggerFromTo([...title.children], 0.6, {y: '+=30'},{ autoAlpha: 1, y: '0',  delay: "3" }, 0.3)
+    tl.staggerFromTo(
+      [...title.children],
+      0.6,
+      { y: "+=30" },
+      { autoAlpha: 1, y: "0", delay: "3" },
+      0.3
+    )
       .staggerTo([...lan.children], 0.2, { autoAlpha: 1, x: "0" }, 0.1)
       .staggerTo([...tech.children], 0.2, { autoAlpha: 1 }, 0.1)
       .staggerTo([...buttons.children], 0.4, { autoAlpha: 1 }, 0.3, "-=1")

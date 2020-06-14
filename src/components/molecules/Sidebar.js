@@ -5,7 +5,7 @@ import GitHubIcon from "../../assets/githubIcon.svg"
 import LinkedinIcon from "../../assets/linkedinIcon.svg"
 import { useScrollPosition } from "../../hooks/scrollHook"
 import gsap from "gsap"
-import {socialLinks} from '../../utils/SocialLinks';
+import { socialLinks } from "../../utils/SocialLinks"
 
 const Container = styled.div`
   position: fixed;
@@ -25,7 +25,7 @@ const IconWrapper = styled.div`
   margin: 3px 0;
   cursor: pointer;
   transition: transform 0.1s;
-  &:hover{
+  &:hover {
     transform: scale(1.2);
   }
 `
@@ -62,7 +62,6 @@ const ItemWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  
 `
 const SectionTitle = styled.span`
   color: ${({ theme }) => theme.colors.grey};
@@ -72,26 +71,25 @@ const SectionTitle = styled.span`
 const IconsWrapper = styled.div``
 
 const TopLineWrapper = styled.div`
-    overflow-y: hidden;
-    padding: 0 2px;
-`;
+  overflow-y: hidden;
+  padding: 0 2px;
+`
 const TopLine = styled.span`
-    display: block;
-    
-    position: relative;
-    width: 1px;
-    background: ${({theme})=>theme.colors.light200};
-    height: 150px;
-border-radius: 50px;
+  display: block;
 
+  position: relative;
+  width: 1px;
+  background: ${({ theme }) => theme.colors.light200};
+  height: 150px;
+  border-radius: 50px;
 
-transition: all 1s;
-&:before{
-    content: '';
+  transition: all 1s;
+  &:before {
+    content: "";
     display: block;
-    width:100%;
+    width: 100%;
     height: 100%;
-    background: ${({theme})=>theme.colors.text};
+    background: ${({ theme }) => theme.colors.text};
     transform: ${({ position }) => {
       switch (position) {
         case "home":
@@ -106,19 +104,17 @@ transition: all 1s;
     }};
     transition: transform 0.8s;
     border-radius: 50px;
-}
-`;
+  }
+`
 const BotLine = styled.span`
-display: block;
-  
-    position: relative;
-    width: 1px;
-    background: ${({theme})=>theme.colors.text};
-    height: 50px;
-border-radius: 50px;
+  display: block;
 
-
-`;
+  position: relative;
+  width: 1px;
+  background: ${({ theme }) => theme.colors.text};
+  height: 50px;
+  border-radius: 50px;
+`
 
 const Sidebar = () => {
   const scrollPosition = useScrollPosition()
@@ -150,8 +146,8 @@ const Sidebar = () => {
   return (
     <Container>
       <TopLineWrapper ref={topLineRef}>
-            <TopLine position={scrollPosition}/>
-        </TopLineWrapper>
+        <TopLine position={scrollPosition} />
+      </TopLineWrapper>
       <SectionDisplayContainer ref={sectionRef}>
         <SectionDisplayInner position={scrollPosition}>
           <ItemWrapper>
@@ -170,33 +166,23 @@ const Sidebar = () => {
       </SectionDisplayContainer>
       <IconsWrapper ref={iconsRef}>
         <IconWrapper>
-          <a href={socialLinks.linkedin}
-            target='_blank'
-            >
-
-          <LinkedinIcon />
+          <a href={socialLinks.linkedin} target="_blank">
+            <LinkedinIcon />
           </a>
         </IconWrapper>
         <IconWrapper>
-        <a href={socialLinks.github}
-            target='_blank'
-          >
-
-          <GitHubIcon />
+          <a href={socialLinks.github} target="_blank">
+            <GitHubIcon />
           </a>
         </IconWrapper>
         <IconWrapper>
-        <a href={socialLinks.fb}
-            target='_blank'
-          >
-
-          <FbIcon />
+          <a href={socialLinks.fb} target="_blank">
+            <FbIcon />
           </a>
         </IconWrapper>
       </IconsWrapper>
 
-      <BotLine ref={lineRef}/>
-       
+      <BotLine ref={lineRef} />
     </Container>
   )
 }

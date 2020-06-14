@@ -17,7 +17,6 @@ import Sidebar from "./molecules/Sidebar"
 import "../styles/layout.css"
 
 const Layout = ({ children }) => {
-
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -25,10 +24,8 @@ const Layout = ({ children }) => {
         <GlobalStyle />
         <Sidebar />
         <Header />
-        
-        <main>
-          {children}
-          </main>
+
+        <main>{children}</main>
       </ThemeProvider>
     </>
   )

@@ -10,7 +10,6 @@ import { graphql, useStaticQuery } from "gatsby"
 const StyledSlider = styled(Slider)`
   width: 100%;
   overflow: hidden;
-
 `
 
 const Projects = () => {
@@ -24,8 +23,8 @@ const Projects = () => {
           demolink
           date
           githublink
-            technologies
-            advanced
+          technologies
+          advanced
           image {
             fluid(maxWidth: 700, imgixParams: { fm: "png", auto: "compress" }) {
               ...GatsbyDatoCmsFluid
