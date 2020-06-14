@@ -25,7 +25,10 @@ const Layout = ({ children }) => {
         <GlobalStyle />
         <Sidebar />
         <Header />
-        <main>{children}</main>
+        
+        <main>
+          {children}
+          </main>
       </ThemeProvider>
     </>
   )

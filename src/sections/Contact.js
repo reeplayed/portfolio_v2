@@ -5,7 +5,8 @@ import Illustration from "../assets/illustrations/contactIllustration.svg"
 import Heading from "../helpers/Heading"
 import UnderlineText from "../helpers/UnderlineText"
 import { graphql, useStaticQuery } from "gatsby"
-import {socialLinks} from '../helpers/SocialLinks';
+import {socialLinks} from '../utils/SocialLinks';
+import Footer from '../components/organism/Footer';
 
 const Container = styled.div`
   display: flex;
@@ -129,6 +130,8 @@ const Contact = () => {
           </Content>
         </ContactInfoWrapper>
       </Container>
+      <Footer/>
+
     </Section>
   )
 }

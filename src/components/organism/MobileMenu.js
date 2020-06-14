@@ -93,6 +93,10 @@ const MenuItem = styled.li`
   font-size: 40px;
   color: ${({ theme }) => theme.colors.text};
   cursor: pointer;
+  transition: letter-spacing 0.4s;
+  &:hover{
+    letter-spacing: 4px;
+  }
 `
 const MobileMenu = () => {
   const [isOpen, setOpen] = useState(false)

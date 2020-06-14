@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Section from "../helpers/Section"
 import Illustration from "../assets/illustrations/homeIllustration.svg"
-import Title from "../components/Title"
+import Title from "../components/molecules/Title"
 
 const StyledIllustration = styled(Illustration)`
   padding-left: 30px;

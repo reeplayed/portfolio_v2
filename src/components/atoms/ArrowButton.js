@@ -1,6 +1,6 @@
 import React from "react"
 import styled, { css } from "styled-components"
-import ArrowSVG from "../assets/arrow.svg"
+import ArrowSVG from "../../assets/arrow.svg"
 
 const StyledButton = styled.button`
   border: 1px solid ${({ theme }) => theme.colors.lightGrey};

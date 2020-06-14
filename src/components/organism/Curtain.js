@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react"
 import styled from "styled-components"
-import Logo from "../assets/logo.svg"
+import Logo from "../../assets/logo.svg"
 import gsap from "gsap"
 
 const Container = styled.div`

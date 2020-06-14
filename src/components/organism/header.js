@@ -1,10 +1,11 @@
 import React, { useRef, useEffect } from "react"
 import styled from "styled-components"
-import Logo from "../assets/logo.svg"
+import Logo from "../../assets/logo.svg"
 import DesktopMenu from "./DesktopMenu"
 import MobileMenu from "./MobileMenu"
 import { useWindowSize } from "../../hooks/windowSizeHook"
 import gsap from "gsap"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 const HeaderContainer = styled.header`
   position: fixed;
@@ -24,6 +25,7 @@ const HeaderContainer = styled.header`
 `
 const LogoWrapper = styled.div`
   padding: 0 10px;
+  cursor: pointer;
 `
 
 const Header = () => {
@@ -55,7 +57,7 @@ const Header = () => {
 
   return (
     <HeaderContainer ref={headerRef}>
-      <LogoWrapper ref={logoRef}>
+      <LogoWrapper ref={logoRef} onClick={() => scrollTo("#home-section")}>
         <Logo />
       </LogoWrapper>
       {mobileView ? (

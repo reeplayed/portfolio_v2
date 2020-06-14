@@ -1,6 +1,6 @@
 import React, { useRef } from "react"
 import Section from "../helpers/Section"
-import SliderContent from "../components/SliderContent"
+import SliderContent from "../components/organism/SliderContent"
 import Slider from "react-slick"
 import styled from "styled-components"
 import "slick-carousel/slick/slick.css"
@@ -10,6 +10,7 @@ import { graphql, useStaticQuery } from "gatsby"
 const StyledSlider = styled(Slider)`
   width: 100%;
   overflow: hidden;
+
 `
 
 const Projects = () => {

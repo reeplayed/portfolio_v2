@@ -2,22 +2,21 @@ import React from "react"
 import styled from "styled-components"
 import Heading from "../../helpers/Heading"
 import Img from "gatsby-image"
-import ProjectInfoComponent from "./ProjectInfoComponent"
-import ArrowButton from "./ArrowButton"
+import ProjectInfoComponent from "../molecules/ProjectInfoComponent"
+import ArrowButton from "../atoms/ArrowButton"
 import { useWindowSize } from "../../hooks/windowSizeHook"
 import UnderlineText from '../../helpers/UnderlineText';
 
 const Container = styled.div`
   display: flex;
-  width: 100%;
-  height: 100%;
+
   overflow: hidden;
   align-items: center;
   justify-content: center;
 
   ${({ theme }) => theme.mq.standard} {
     flex-direction: column;
-    margin-top: 120px;
+   
   }
 `
 const ContentWrapper = styled.div`
@@ -26,6 +25,7 @@ const ContentWrapper = styled.div`
   padding-bottom: 50px;
   ${({ theme }) => theme.mq.standard} {
     align-items: center;
+    padding: 0;
   }
 `
 const ImageWrapper = styled.div`

@@ -11,6 +11,10 @@ const MenuItem = styled.li`
   color: ${({ theme }) => theme.colors.black};
   cursor: pointer;
   text-shadow: 1px 1px 8px #fff;
+  transition: letter-spacing 0.4s;
+  &:hover{
+    letter-spacing: 2px;
+  }
 `
 const ItemsWrapper = styled.ul`
   width: 500px;
