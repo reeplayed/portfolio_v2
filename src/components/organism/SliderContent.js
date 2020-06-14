@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import Heading from "../helpers/Heading"
+import Heading from "../../helpers/Heading"
 import Img from "gatsby-image"
 import ProjectInfoComponent from "./ProjectInfoComponent"
 import ArrowButton from "./ArrowButton"
-import { useWindowSize } from "../hooks/windowSizeHook"
-import UnderlineText from '../helpers/UnderlineText';
+import { useWindowSize } from "../../hooks/windowSizeHook"
+import UnderlineText from '../../helpers/UnderlineText';
 
 const Container = styled.div`
   display: flex;

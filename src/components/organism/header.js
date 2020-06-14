@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Logo from "../assets/logo.svg"
 import DesktopMenu from "./DesktopMenu"
 import MobileMenu from "./MobileMenu"
-import { useWindowSize } from "../hooks/windowSizeHook"
+import { useWindowSize } from "../../hooks/windowSizeHook"
 import gsap from "gsap"
 
 const HeaderContainer = styled.header`

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react"
 import styled from "styled-components"
 import TechIconList from "./TechIconList"
-import StyledButton from "../helpers/StyledButton"
+import StyledButton from "../../helpers/StyledButton"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import gsap from "gsap"
 

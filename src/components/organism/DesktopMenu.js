@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { useScrollPosition } from "../hooks/scrollHook"
+import { useScrollPosition } from "../../hooks/scrollHook"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
 const Container = styled.div`

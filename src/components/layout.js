@@ -10,9 +10,9 @@ import PropTypes from "prop-types"
 import GlobalStyle from "../styles/globalStyles"
 import { ThemeProvider } from "styled-components"
 import { theme } from "../styles/theme"
-import Curtain from "./Curtain"
-import Header from "./header"
-import Sidebar from "./Sidebar"
+import Curtain from "./organism/Curtain"
+import Header from "./organism/header"
+import Sidebar from "./molecules/Sidebar"
 
 import "../styles/layout.css"
 

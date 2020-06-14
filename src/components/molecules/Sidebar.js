@@ -3,9 +3,9 @@ import styled from "styled-components"
 import FbIcon from "../assets/fbIcon.svg"
 import GitHubIcon from "../assets/githubIcon.svg"
 import LinkedinIcon from "../assets/linkedinIcon.svg"
-import { useScrollPosition } from "../hooks/scrollHook"
+import { useScrollPosition } from "../../hooks/scrollHook"
 import gsap from "gsap"
-import {socialLinks} from '../helpers/SocialLinks';
+import {socialLinks} from '../../utils/SocialLinks';
 
 const Container = styled.div`
   position: fixed;
