@@ -74,8 +74,8 @@ const About = () => {
         <DescriptionContainer data-aos="fade-up">
           <Heading>About</Heading>
           <DescriptionContent>
-            Hello, I am 22 years old student of Finance and Accounting. About a
-            one year ago i decided to learn programming. In my projects I
+            Hello, I am 22 years old student of Finance and Accounting. About 
+            one year ago I decided to learn programming. In my projects I
             connect the world of Frontend and Backend using technologies such as
             Django and React.
           </DescriptionContent>

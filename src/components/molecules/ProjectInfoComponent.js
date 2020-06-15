@@ -45,7 +45,7 @@ const ProjectInfoComponent = ({ date, advanced, technologies, link }) => {
         <Value>{moment(date).format("MMMM YYYY")}</Value>
       </ItemBox>
       <ItemBox>
-        <Title>Advanced</Title>
+        <Title>Difficulty</Title>
         <Value>{advanced}</Value>
       </ItemBox>
 
